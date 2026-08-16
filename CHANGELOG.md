@@ -15,7 +15,7 @@ All notable changes to public Aetheria builds are documented here.
 - Состояние мира: сущности, предметы, экипировка, эффекты, локации, квесты, фракции и время.
 - Боевая система с действиями, зонами тела, бронёй, столкновениями и последствиями.
 - Автономное рождение NPC: отдельные голос, память и снаряжение.
-- Провайдеры LLMost, OpenAI-compatible, Anthropic, Ollama и Offline Mock.
+- Провайдеры LLMost, OpenAI-compatible, Anthropic, Ollama и LM Studio.
 - SSE-стриминг, reasoning, usage-телеметрия, повторы запросов и диагностика.
 - Русский и английский интерфейс.
 - Сохранения, моды, data-driven workflows и инструменты.
@@ -24,8 +24,8 @@ All notable changes to public Aetheria builds are documented here.
 
 ### Проверка сборки
 
-- 1059 автоматических тестов;
-- 12 250 проверок;
+- 1062 автоматических теста;
+- 12 251 проверка;
 - 0 падений перед экспортом;
 - smoke-запуск экспортированного EXE в чистом профиле.
 
@@ -40,7 +40,7 @@ First public test build.
 - Persistent entities, items, equipment, effects, locations, quests, factions, and story time.
 - Combat actions with body zones, armor, collisions, and consequences.
 - Autonomous NPC birth with individual voice, memory, and equipment.
-- LLMost, OpenAI-compatible, Anthropic, Ollama, and Offline Mock providers.
+- LLMost, OpenAI-compatible, Anthropic, Ollama, and LM Studio providers.
 - SSE streaming, reasoning handling, usage telemetry, retries, and diagnostics.
 - Russian and English UI.
 - Saves, mods, data-driven workflows, and tools.

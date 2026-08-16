@@ -10,6 +10,7 @@
 
 <p align="center">
   <a href="README.en.md">English</a> ·
+  <a href="GALLERY.md">Галерея</a> ·
   <a href="https://github.com/ai-pop/aetheria-rpg/releases/tag/v0.1.0-test">Скачать</a> ·
   <a href="https://github.com/ai-pop/aetheria-rpg/issues">Сообщить об ошибке</a> ·
   <a href="https://github.com/ai-pop/aetheria-rpg/discussions">Обсуждения</a>
@@ -39,23 +40,29 @@ Aetheria — не обычный чат с моделью. ИИ получает
 - **Правила как данные.** Статы, ресурсы, формулы и типы урона можно расширять без переписывания ядра игры.
 - **Автономные NPC.** Персонажи получают голос, память, цели, снаряжение и собственный агентный контекст.
 - **LLM-провайдеры.** LLMost, OpenAI-compatible API, OpenRouter, Groq, DeepSeek, локальные Ollama/LM Studio и нативный Anthropic API.
-- **Оффлайн-режим.** Встроенная заглушка позволяет запустить игру без API-ключа и проверить весь интерфейс.
 - **Русский и English.** Интерфейс переключается в настройках.
 
-## Скриншоты
+## Актуальные скриншоты
+
+Все кадры сняты с текущей сборки, а не со старых макетов.
+
+![Игровая лента Aetheria](media/gallery/09-gameplay.webp)
 
 <p align="center">
-  <img src="media/gameplay.png" alt="Aetheria gameplay" width="100%" />
+  <img src="media/gallery/10-character-panel.webp" alt="Панель характеристик" width="49%" />
+  <img src="media/gallery/11-inventory-panel.webp" alt="Снаряжение" width="49%" />
 </p>
 
 <p align="center">
-  <img src="media/menu.png" alt="Aetheria menu" width="49%" />
-  <img src="media/settings.png" alt="Aetheria settings" width="49%" />
+  <img src="media/gallery/16-pause.webp" alt="Меню паузы" width="49%" />
+  <img src="media/gallery/17-tooltip.webp" alt="Отложенная подсказка" width="49%" />
 </p>
+
+[**Открыть полную галерею из 18 актуальных скриншотов →**](GALLERY.md)
 
 ## Настройка модели
 
-Без ключа игра использует Offline Mock. Для подключения живой модели:
+Для игры необходимо подключить облачную или локальную LLM-модель:
 
 1. Откройте **Настройки → Провайдер**.
 2. Выберите готовый профиль или создайте собственный.
@@ -75,7 +82,7 @@ API-ключи хранятся только локально в `user://secrets
 - Windows 10/11 x86_64;
 - видеокарта с поддержкой OpenGL 3.3;
 - доступ в интернет для облачного LLM-провайдера;
-- API-ключ выбранного сервиса — необязательно для Offline Mock.
+- API-ключ выбранного облачного сервиса либо настроенная локальная модель Ollama/LM Studio.
 
 Настройки и сохранения находятся здесь:
 

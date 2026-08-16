@@ -27,7 +27,7 @@ body:
     attributes:
       label: Провайдер и модель / Provider and model
       description: Без API-ключа / Do not include the API key
-      placeholder: LLMost — vendor/model или Offline Mock
+      placeholder: LLMost — vendor/model или локальная Ollama-модель
   - type: textarea
     id: steps
     attributes:

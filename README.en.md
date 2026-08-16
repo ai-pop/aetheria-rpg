@@ -10,6 +10,7 @@
 
 <p align="center">
   <a href="README.md">Русский</a> ·
+  <a href="GALLERY.md">Gallery</a> ·
   <a href="https://github.com/ai-pop/aetheria-rpg/releases/tag/v0.1.0-test">Download</a> ·
   <a href="https://github.com/ai-pop/aetheria-rpg/issues">Report a bug</a> ·
   <a href="https://github.com/ai-pop/aetheria-rpg/discussions">Discussions</a>
@@ -39,23 +40,29 @@ Aetheria is not a chat wrapper. The model receives strictly defined tools and us
 - **Rules as data.** Stats, resources, formulas, and damage types can grow without rewriting the core game.
 - **Autonomous NPCs.** Characters receive a voice, memory, goals, equipment, and their own agent context.
 - **Multiple LLM providers.** LLMost, OpenAI-compatible APIs, OpenRouter, Groq, DeepSeek, local Ollama/LM Studio, and native Anthropic.
-- **Offline mode.** A deterministic built-in mock lets you launch and inspect the complete interface without an API key.
 - **Russian and English UI.** Switch languages in Settings.
 
-## Screenshots
+## Current screenshots
+
+Every image comes from the current build, not an old UI mockup.
+
+![Aetheria narrative stream](media/gallery/09-gameplay.webp)
 
 <p align="center">
-  <img src="media/gameplay.png" alt="Aetheria gameplay" width="100%" />
+  <img src="media/gallery/10-character-panel.webp" alt="Character panel" width="49%" />
+  <img src="media/gallery/11-inventory-panel.webp" alt="Inventory" width="49%" />
 </p>
 
 <p align="center">
-  <img src="media/menu.png" alt="Aetheria menu" width="49%" />
-  <img src="media/settings.png" alt="Aetheria settings" width="49%" />
+  <img src="media/gallery/16-pause.webp" alt="Pause menu" width="49%" />
+  <img src="media/gallery/17-tooltip.webp" alt="Delayed tooltip" width="49%" />
 </p>
+
+[**Open the complete gallery of 18 current screenshots →**](GALLERY.md)
 
 ## Connecting a model
 
-Without a key, Aetheria starts with Offline Mock. To use a live model:
+Aetheria requires a configured cloud or local LLM model:
 
 1. Open **Settings → Provider**.
 2. Select a profile or create one.
@@ -75,7 +82,7 @@ API keys remain local in `user://secrets.json`. They are never included in save 
 - Windows 10/11 x86_64;
 - an OpenGL 3.3-capable GPU;
 - internet access for cloud LLM providers;
-- an API key for the selected service, unless using Offline Mock.
+- an API key for the selected cloud service, or a configured local Ollama/LM Studio model.
 
 Settings and save files are stored under:
 
