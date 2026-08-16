@@ -1,0 +1,57 @@
+name: Ошибка / Bug report
+description: Сообщить о воспроизводимой проблеме в публичной сборке Aetheria
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Не публикуйте API-ключи, Authorization headers или secrets.json.
+        Never post API keys, Authorization headers, or secrets.json.
+  - type: input
+    id: version
+    attributes:
+      label: Версия Aetheria / Aetheria version
+      placeholder: v0.1.0-test
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Версия Windows / Windows version
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: input
+    id: provider
+    attributes:
+      label: Провайдер и модель / Provider and model
+      description: Без API-ключа / Do not include the API key
+      placeholder: LLMost — vendor/model или Offline Mock
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения / Reproduction steps
+      placeholder: |
+        1. Открыть…
+        2. Нажать…
+        3. Увидеть…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое поведение / Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактическое поведение / Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Скриншоты и диагностика / Screenshots and diagnostics
+      description: Перетащите очищенные от секретов файлы сюда.

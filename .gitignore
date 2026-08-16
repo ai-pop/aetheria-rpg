@@ -1,0 +1,9 @@
+# Binary builds belong in GitHub Releases, never in repository history.
+*.exe
+*.zip
+*.pck
+build/
+
+# Local files
+.DS_Store
+Thumbs.db

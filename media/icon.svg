@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" shape-rendering="crispEdges">
+  <!--
+    Aetheria — a word finding itself in noise.
+
+    The same idea as the title screen: a field of static resolving into a
+    letter, frozen at the moment the A lands.
+
+    Drawn on a 16px grid, not 8px. The first attempt used 8px strokes and the
+    letter turned to mush at 32px — the size a launcher actually shows. Thick
+    strokes and splayed legs are what keep an A an A when it is twelve pixels
+    tall.
+  -->
+  <rect width="128" height="128" fill="#0d0d10"/>
+
+  <!-- Static field. Sparse and dim: it frames the glyph, never competes. -->
+  <g fill="#44444c">
+    <rect x="8"   y="8"   width="8" height="8" opacity=".50"/>
+    <rect x="28"  y="12"  width="8" height="8" opacity=".26"/>
+    <rect x="112" y="8"   width="8" height="8" opacity=".50"/>
+    <rect x="92"  y="12"  width="8" height="8" opacity=".26"/>
+    <rect x="8"   y="40"  width="8" height="8" opacity=".30"/>
+    <rect x="112" y="48"  width="8" height="8" opacity=".30"/>
+    <rect x="8"   y="80"  width="8" height="8" opacity=".26"/>
+    <rect x="112" y="88"  width="8" height="8" opacity=".26"/>
+    <rect x="8"   y="112" width="8" height="8" opacity=".50"/>
+    <rect x="30"  y="114" width="8" height="8" opacity=".22"/>
+    <rect x="112" y="112" width="8" height="8" opacity=".50"/>
+    <rect x="90"  y="114" width="8" height="8" opacity=".22"/>
+  </g>
+
+  <!--
+    The glyph. Legs splay outward so the silhouette is a triangle even when
+    the detail is gone: that triangle is what the eye reads at 16px.
+  -->
+  <g fill="#ff5c2e">
+    <!-- apex -->
+    <rect x="52" y="30" width="24" height="14"/>
+    <!-- left leg, stepping outward -->
+    <rect x="44" y="44" width="14" height="18"/>
+    <rect x="36" y="62" width="14" height="18"/>
+    <rect x="28" y="80" width="14" height="20"/>
+    <!-- right leg -->
+    <rect x="70" y="44" width="14" height="18"/>
+    <rect x="78" y="62" width="14" height="18"/>
+    <rect x="86" y="80" width="14" height="20"/>
+    <!-- crossbar -->
+    <rect x="42" y="70" width="44" height="12"/>
+  </g>
+
+  <!-- One cell still falling: the last of the noise becoming glyph. -->
+  <rect x="60" y="52" width="8" height="8" fill="#ff5c2e" opacity=".38"/>
+
+  <!-- Corner ticks: a frame implied, not drawn, so nothing boxes the glyph in. -->
+  <g fill="#ff5c2e" opacity=".65">
+    <rect x="14" y="14" width="18" height="5"/>
+    <rect x="14" y="14" width="5"  height="18"/>
+    <rect x="96" y="14" width="18" height="5"/>
+    <rect x="109" y="14" width="5" height="18"/>
+    <rect x="14" y="109" width="18" height="5"/>
+    <rect x="14" y="96"  width="5"  height="18"/>
+    <rect x="96" y="109" width="18" height="5"/>
+    <rect x="109" y="96" width="5"  height="18"/>
+  </g>
+</svg>
