@@ -35,11 +35,12 @@ Windows SmartScreen may warn because the test executable is not yet signed with 
 
 Aetheria is not a chat wrapper. The model receives strictly defined tools and uses them to change persistent game state: locations, NPCs, inventory, checks, combat, time, quests, and consequences.
 
-- **Agents as world participants.** Game Master, Worldsmith, Referee, Loremaster, Director, NPC Actor, Prompt Hubber, and Outfitter have separate responsibilities.
+- **Agents as world participants.** Head GM orchestrates the turn, a separate Narrative GM renders established facts, and Worldsmith, Referee, Loremaster, Director, NPC Actor, Prompt Hubber, and Outfitter follow their own strict roles.
 - **State instead of hand-waving.** Entities, equipment, effects, quests, factions, the story clock, and rules live in the engine.
 - **Rules as data.** Stats, resources, formulas, and damage types can grow without rewriting the core game.
 - **Autonomous NPCs.** Characters receive a voice, memory, goals, equipment, and their own agent context.
 - **Multiple LLM providers.** LLMost, OpenAI-compatible APIs, OpenRouter, Groq, DeepSeek, local Ollama/LM Studio, and native Anthropic.
+- **Actionable connection failures.** Network/API errors show a clear reason and let the player resume the interrupted turn or open provider settings.
 - **Russian and English UI.** Switch languages in Settings.
 
 ## Current screenshots
