@@ -8,8 +8,15 @@ All notable changes to public Aetheria builds are documented here.
 
 Первая публичная тестовая версия; pre-release регулярно пересобирается из актуального `main`.
 
-### Обновление сборки 871a33f
+### Обновление сборки 0987fd3
 
+- После Prompt Hubber полный совет всех базовых агентов формирует единый план мира; после строительства второй полный совет проверяет результат, а Главный ГМ автоматически исправляет подтверждённые проблемы до открытия сцены.
+- Каждый игровой ход, включая реплику в диалоге, механически начинается отдельным `council.call` с 1–3 нужными специалистами. Остальные tools не выполняются до получения стенограммы совета.
+- Любой физический предмет теперь можно взять в руку: объект без специального слота попадает в `main_hand`, а `off_hand` доступен явно. Исправлен показанный в логе `Nokia 3310 → not_equippable`.
+- В канале Главного ГМа F6 работает Markdown: заголовки, жирный/курсивный текст, списки, цитаты, inline/fenced code и ссылки.
+- В OOC художественные tools скрыты и запрещены механически; `{narrative: ...}` преобразуется в прямой текст F6.
+- `entity.create` больше не может перезаписать существующий `player` или другой занятый ID.
+- Реальный LLMost image-запрос подтверждён: движок последовательно убрал неподдерживаемые `aspect_ratio` и `resolution`, после чего изображение было успешно создано.
 - Строгие контракты между Главным ГМом, ГМом-рассказчиком и NPC: агент больше не получает заведомо запрещённые команды.
 - NPC-команды автоматически привязываются к своему персонажу; исправлены `say`, `turn.end`, память, отношение и варианты имён tools с подчёркиваниями.
 - Ошибка сети или API теперь показывается понятной карточкой с причиной, кнопками **«Повторить»** и **«Настройки»**; повтор продолжает прерванный ход без повторного применения успешных действий.
@@ -35,8 +42,8 @@ All notable changes to public Aetheria builds are documented here.
 
 ### Проверка сборки
 
-- 1114 автоматических тестов;
-- 13 001 проверка;
+- 1129 автоматических тестов;
+- 13 095 проверок;
 - 0 падений перед экспортом;
 - smoke-запуск экспортированного EXE в чистом профиле.
 
@@ -44,8 +51,15 @@ All notable changes to public Aetheria builds are documented here.
 
 First public test version; the pre-release is rebuilt regularly from the current `main`.
 
-### Build 871a33f update
+### Build 0987fd3 update
 
+- After Prompt Hubber, a full built-in-agent council agrees on the world plan. A second full council reviews the built world, and Head GM repairs verified findings before the opening scene.
+- Every gameplay turn, including dialogue replies, must begin with a separate `council.call` using 1–3 relevant specialists. Other tools cannot run until Head GM receives the transcript.
+- Every physical item can now be held: slotless objects default to `main_hand`, with explicit `off_hand` support. This fixes the logged `Nokia 3310 → not_equippable` failure.
+- The Head GM F6 channel now renders Markdown: headings, bold/italic, lists, quotes, inline/fenced code, and links.
+- Narrative presentation tools are hidden and mechanically denied in OOC; `{narrative: ...}` is reduced to direct F6 text.
+- `entity.create` can no longer overwrite an existing player or any occupied entity ID.
+- A real LLMost image request verified adaptive capabilities: the engine removed unsupported `aspect_ratio`, then `resolution`, and generated the image successfully.
 - Strict Head GM, Narrative GM, and NPC contracts: agents are no longer offered commands the engine will inevitably reject.
 - NPC calls are bound to their own character; fixed `say`, `turn.end`, memory, disposition, and underscore-form tool names.
 - Network/API failures now appear as a clear card with the reason plus **Retry** and **Settings** actions. Retry resumes the interrupted turn without reapplying successful actions.

@@ -36,6 +36,9 @@ Windows SmartScreen may warn because the test executable is not yet signed with 
 Aetheria is not a chat wrapper. The model receives strictly defined tools and uses them to change persistent game state: locations, NPCs, inventory, checks, combat, time, quests, and consequences.
 
 - **Agents as world participants.** Head GM orchestrates the turn, a separate Narrative GM renders established facts, and Worldsmith, Referee, Loremaster, Director, NPC Actor, Prompt Hubber, and Outfitter follow their own strict roles.
+- **Council as a mandatory loop stage.** All agents agree on the plan before world creation and review the finished result; every normal turn begins with 1–3 relevant specialists.
+- **Physical hands instead of an “equippable” flag.** A phone, cup, keys, stone, or any other item can be held in either hand.
+- **Private Markdown OOC.** The Head GM F6 channel supports formatted replies and is mechanically isolated from Narrator and the game scene.
 - **State instead of hand-waving.** Entities, equipment, effects, quests, factions, the story clock, and rules live in the engine.
 - **Rules as data.** Stats, resources, formulas, and damage types can grow without rewriting the core game.
 - **Autonomous NPCs.** Characters receive a voice, memory, goals, equipment, and their own agent context.
