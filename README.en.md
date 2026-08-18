@@ -37,6 +37,8 @@ Aetheria is not a chat wrapper. The model receives strictly defined tools and us
 
 - **Agents as world participants.** Head GM orchestrates the turn, a separate Narrative GM renders established facts, and Worldsmith, Referee, Loremaster, Director, NPC Actor, Prompt Hubber, and Outfitter follow their own strict roles.
 - **Council as a mandatory loop stage.** All agents agree on the plan before world creation and review the finished result; every normal turn begins with 1–3 relevant specialists.
+- **World Tree Architect.** A dedicated working agent turns the startup council into a large graph of connected regions, nested locations, and conflicting factions before Worldsmith's pass.
+- **One response, one moment.** Narrative GM does not write a chapter or entire scene: it shows one change, its immediate consequence, and one precise detail, then returns control.
 - **Physical hands instead of an “equippable” flag.** A phone, cup, keys, stone, or any other item can be held in either hand.
 - **Private Markdown OOC.** The Head GM F6 channel supports formatted replies and is mechanically isolated from Narrator and the game scene.
 - **State instead of hand-waving.** Entities, equipment, effects, quests, factions, the story clock, and rules live in the engine.

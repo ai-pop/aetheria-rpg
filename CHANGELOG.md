@@ -8,8 +8,14 @@ All notable changes to public Aetheria builds are documented here.
 
 Первая публичная тестовая версия; pre-release регулярно пересобирается из актуального `main`.
 
-### Обновление сборки 0987fd3
+### Обновление сборки 4a84e9f
 
+- Добавлен десятый базовый агент — **Архитектор Дерева мира**. В рабочей части стартового совета он создаёт большой иерархический каркас из 13–20 связанных локаций и 5–8 фракций; Worldsmith затем наполняет готовое дерево, а не строит вторую карту.
+- Введён системный контракт **«один ответ — один игровой момент»**. Это не лимит символов: Narrative GM получает правила ритма, выбирает одно текущее изменение, показывает действие/немедленное последствие/одну точную деталь и сразу возвращает управление.
+- Несколько `narrate` в одном ответе не обрезаются: весь литературный batch отклоняется, и агент обязан переформулировать его как один связный момент. Один корректный narrative-тег также принимается как момент.
+- Кампанийный Prompt Hubber больше не может задавать размер ответа или «медленную длинную прозу» поверх игрового контракта.
+- Варианты действий появляются только в настоящих точках решения, а не после каждого простого шага.
+- Стили `dread` и `tense` теперь являются валидными стилями Narrator и не вызывают бессмысленные циклы исправления.
 - После Prompt Hubber полный совет всех базовых агентов формирует единый план мира; после строительства второй полный совет проверяет результат, а Главный ГМ автоматически исправляет подтверждённые проблемы до открытия сцены.
 - Каждый игровой ход, включая реплику в диалоге, механически начинается отдельным `council.call` с 1–3 нужными специалистами. Остальные tools не выполняются до получения стенограммы совета.
 - Любой физический предмет теперь можно взять в руку: объект без специального слота попадает в `main_hand`, а `off_hand` доступен явно. Исправлен показанный в логе `Nokia 3310 → not_equippable`.
@@ -42,8 +48,8 @@ All notable changes to public Aetheria builds are documented here.
 
 ### Проверка сборки
 
-- 1129 автоматических тестов;
-- 13 095 проверок;
+- 1134 автоматических теста;
+- 13 249 проверок;
 - 0 падений перед экспортом;
 - smoke-запуск экспортированного EXE в чистом профиле.
 
@@ -51,8 +57,14 @@ All notable changes to public Aetheria builds are documented here.
 
 First public test version; the pre-release is rebuilt regularly from the current `main`.
 
-### Build 0987fd3 update
+### Build 4a84e9f update
 
+- Added the tenth built-in agent, **World Tree Architect**. During the working phase of the startup council it creates a large hierarchy of 13–20 connected locations and 5–8 factions; Worldsmith fills the existing tree instead of creating a second map.
+- Added the **one response = one playable moment** system contract. This is not a character cap: Narrative GM selects one current change, shows the action/immediate consequence/one precise detail, and returns control.
+- Multiple `narrate` calls are not truncated. The entire chapter-like batch is rejected and the agent must reformulate it as one coherent moment. One correct narrative tag is also accepted.
+- Campaign overlays can no longer request long/slow prose or override narrative density.
+- Choices appear only at genuine decision points, not after every trivial step.
+- `dread` and `tense` are valid narrative styles and no longer trigger correction loops.
 - After Prompt Hubber, a full built-in-agent council agrees on the world plan. A second full council reviews the built world, and Head GM repairs verified findings before the opening scene.
 - Every gameplay turn, including dialogue replies, must begin with a separate `council.call` using 1–3 relevant specialists. Other tools cannot run until Head GM receives the transcript.
 - Every physical item can now be held: slotless objects default to `main_hand`, with explicit `off_hand` support. This fixes the logged `Nokia 3310 → not_equippable` failure.
