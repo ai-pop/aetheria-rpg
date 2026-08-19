@@ -8,8 +8,13 @@ All notable changes to public Aetheria builds are documented here.
 
 Первая публичная тестовая версия; pre-release регулярно пересобирается из актуального `main`.
 
-### Обновление сборки 4a84e9f
+### Обновление сборки 0a59aca
 
+- Сетевой обрыв во время создания мира теперь **приостанавливает точный workflow-step**, а не запускает аварийный сценарий Главного ГМа.
+- Checkpoint хранит исходный замысел, персонажа, индекс шага, завершённые результаты, стенограмму совета и полную историю прерванного agent-run с успешными tool results.
+- «Повторить» возобновляет того же агента после последнего успешного tool result; завершённые шаги, участники совета и мутации не проигрываются заново.
+- Пока генерация приостановлена, fallback-локации, открывающая сцена и обычные игровые ходы механически заблокированы.
+- Создаётся локальное recovery-сохранение. Workflow checkpoint входит в save payload и восстанавливается после перезапуска/загрузки.
 - Добавлен десятый базовый агент — **Архитектор Дерева мира**. В рабочей части стартового совета он создаёт большой иерархический каркас из 13–20 связанных локаций и 5–8 фракций; Worldsmith затем наполняет готовое дерево, а не строит вторую карту.
 - Введён системный контракт **«один ответ — один игровой момент»**. Это не лимит символов: Narrative GM получает правила ритма, выбирает одно текущее изменение, показывает действие/немедленное последствие/одну точную деталь и сразу возвращает управление.
 - Несколько `narrate` в одном ответе не обрезаются: весь литературный batch отклоняется, и агент обязан переформулировать его как один связный момент. Один корректный narrative-тег также принимается как момент.
@@ -48,8 +53,8 @@ All notable changes to public Aetheria builds are documented here.
 
 ### Проверка сборки
 
-- 1134 автоматических теста;
-- 13 249 проверок;
+- 1136 автоматических тестов;
+- 13 279 проверок;
 - 0 падений перед экспортом;
 - smoke-запуск экспортированного EXE в чистом профиле.
 
@@ -57,8 +62,13 @@ All notable changes to public Aetheria builds are documented here.
 
 First public test version; the pre-release is rebuilt regularly from the current `main`.
 
-### Build 4a84e9f update
+### Build 0a59aca update
 
+- A network interruption during world creation now **pauses the exact workflow step** instead of starting an emergency Head GM scenario.
+- The checkpoint preserves premise, character, step index, completed results, council transcript, and the interrupted agent message/tool history.
+- Retry resumes the same agent after the last successful tool result; completed steps, council members, and mutations are not replayed.
+- Fallback locations, opening narration, and normal gameplay are mechanically blocked while generation is paused.
+- A local recovery save includes the workflow checkpoint and can restore it after restart/load.
 - Added the tenth built-in agent, **World Tree Architect**. During the working phase of the startup council it creates a large hierarchy of 13–20 connected locations and 5–8 factions; Worldsmith fills the existing tree instead of creating a second map.
 - Added the **one response = one playable moment** system contract. This is not a character cap: Narrative GM selects one current change, shows the action/immediate consequence/one precise detail, and returns control.
 - Multiple `narrate` calls are not truncated. The entire chapter-like batch is rejected and the agent must reformulate it as one coherent moment. One correct narrative tag is also accepted.
